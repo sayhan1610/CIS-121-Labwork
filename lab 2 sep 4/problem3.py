@@ -4,7 +4,7 @@ width_a = float(input("Enter the width A of the trapezoid: "))
 width_b = float(input("Enter the width B of the trapezoid: "))
 
 # Calculate Area of the Trapezoid
-area = (height * (width_a + width_b)) / 2
+area = ((width_a + width_b)/2) * height
 
 # Print Area of the Trapezoid
 print("Area of the trapezoid:", area)

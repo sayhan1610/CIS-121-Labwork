@@ -1,0 +1,80 @@
+Outcome 7 Rubric
+P S D I N
+std (Proficient) (Sufficient) (Developing) (Insufficient) (No evidence)
+7.1
+Implements correct iteration
+gathering data according to pattern
+AND returns correct values AND
+explains approach using comments
+and appropriately named function
+AND program executes error-free.
+Implements correct iteration
+gathering data according to
+pattern AND returns correct
+values AND program executes
+error-free.
+Minor syntax
+mistakes but correct
+logic OR prints
+output rather than
+returns values.
+Incorrect
+iteration OR
+misuse of list
+operations OR
+patterns are
+inappropriate for
+the problem.
+No attempt
+or partial/
+incomplete
+solution.
+7.2
+Implements correct iteration
+gathering data according to
+formula AND returns correct
+values AND explains approach
+using comments and appropriately
+named function AND program
+executes error-free.
+Implements correct iteration
+gathering data according to
+formula AND returns correct
+values AND program executes
+error-free.
+Minor syntax
+mistakes but correct
+logic OR prints
+output rather than
+returns values.
+Incorrect
+iteration OR
+misuse of list
+operations OR
+patterns are
+inappropriate for
+the problem.
+No attempt
+or partial/
+incomplete
+solution.
+7.3
+Full pipeline implemented correctly
+(iteration → extraction →
+aggregation → application) AND
+clear explanations using comments
+appropriately named functions.
+Completes extraction AND
+aggregation correctly.
+Completes extraction
+OR aggregation
+correctly, but with
+only minor syntax
+issues in the other.
+Incorrect logic or
+extraction or
+aggregation.
+No attempt
+or partial/
+incomplete
+solution.

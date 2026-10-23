@@ -1,10 +1,15 @@
+from math import sqrt
+
+
 class Vector:
-	def __init__(x_direction, y_direction):
+	def __init__(self, x_direction, y_direction):
+		# Adding self allows Python to bind the vector instance and accept both components.
 		self.x_direction = x_direction
 		self.y_direction = y_direction
 	
 	def get_x_direction(self):
-		return self.y_direction
+		# The x getter previously returned the y component.
+		return self.x_direction
 	
 	def set_x_direction(self, x_direction):
 		self.x_direction = x_direction

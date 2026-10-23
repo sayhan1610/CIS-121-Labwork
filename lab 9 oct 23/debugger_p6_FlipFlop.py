@@ -2,8 +2,9 @@ def flip_flop(word):
 	length = len(word)
 	middle = length // 2
 
-	if length // 2 == 0:
-		first_half = word[middle:]
+	# Parity must be checked with modulo; integer division is zero for short words only.
+	if length % 2 == 0:
+		first_half = word[:middle]
 		second_half = word[middle:]
 		return second_half + first_half
 	else:
@@ -17,4 +18,3 @@ print(flip_flop("abcd")) # Expected output: "cdab" (that is, cd then ab ... even
 print(flip_flop("grapes")) # Expected output: "pesgra" (that is, pes then gra ... even length)
 print(flip_flop("abcde")) # Expected output: "decab" (that is, de then c then ab ... odd length)
 print(flip_flop("cranberries")) # Expected output: "rriesecranb" (that is, rries then e then cranb ... odd length)
-

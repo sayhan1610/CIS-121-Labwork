@@ -1,5 +1,6 @@
 class ColorRGB:
-	def __init__(red, green, blue):
+	def __init__(self, red, green, blue):
+		# Instance methods need self so construction can store the three channels.
 		self.red = red
 		self.green = green
 		self.blue = blue
@@ -14,7 +15,8 @@ class ColorRGB:
 		return self.green
 	
 	def set_green(self, green):
-		green = self.green
+		# Assigning to the parameter left the stored color unchanged.
+		self.green = green
 	
 	def get_blue(self):
 		return self.blue
@@ -23,7 +25,8 @@ class ColorRGB:
 		self.blue = blue
 	
 	def to_grayscale(self):
-		return 0.5 * self.red + 0.59 * self.green + 0.11 * self.blue
+		# The exercise's expected grayscale is the arithmetic mean of RGB channels.
+		return (self.red + self.green + self.blue) / 3
 	
 # Test the function with a sample input
 color = ColorRGB(100, 150, 200)

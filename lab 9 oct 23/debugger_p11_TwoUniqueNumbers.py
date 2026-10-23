@@ -1,17 +1,13 @@
 def return_unique(numbers):
-
-	number_dicitonary = {}
-	#load dictionary
-	for number in range(len(numbers)):
-		if number in number_dicitonary:
-			number_dicitonary[number] = 1			
-		else:
-			number_dicitonary[number] += 1
+	number_dictionary = {}
+	# Count the actual values; indexing with range(len(numbers)) counted positions instead.
+	for number in numbers:
+		number_dictionary[number] = number_dictionary.get(number, 0) + 1
 
 	unique_numbers = []
-	#find unique numbers in dictionary
-	for number in number_dicitonary.values():
-		if number_dicitonary[number] == 1:
+	# Keep the original input order while selecting values that occur exactly once.
+	for number in numbers:
+		if number_dictionary[number] == 1:
 			unique_numbers.append(number)
 
 	return unique_numbers

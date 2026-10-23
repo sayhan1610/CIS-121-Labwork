@@ -1,12 +1,13 @@
 def like_or_dislike(events):
-	state = "like"
-	
-	for event in range(events):
-		if event != state:
+	state = "nothing"
+
+	# Events are button names, not a number for range(); a repeated press toggles off.
+	for event in events:
+		if event == state:
 			state = "nothing"
 		else:
 			state = event
-	
+
 	return state
 
 # Test the function with a sample input

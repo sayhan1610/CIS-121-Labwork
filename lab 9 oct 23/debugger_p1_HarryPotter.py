@@ -1,22 +1,24 @@
-def convert_knuts(knuts=450):
+# The handout specifies 900 as the default; the old 450 gave the wrong no-argument result.
+def convert_knuts(knuts=900):
 	KNUTS_PER_SICKLE = 29
 	SICKLES_PER_GALLEON = 17
 	KNUTS_PER_GALLEON = KNUTS_PER_SICKLE * SICKLES_PER_GALLEON
-				
+
 	galleons = knuts // KNUTS_PER_GALLEON
-	remaining_knuts = knuts // KNUTS_PER_GALLEON
-				
+	# Subtract galleons first; dividing again discarded the knuts remainder.
+	remaining_knuts = knuts % KNUTS_PER_GALLEON
+
 	sickles = remaining_knuts // KNUTS_PER_SICKLE
 	remaining_knuts = remaining_knuts % KNUTS_PER_SICKLE
-	
+
 	output = ""
-	
-	if galleons >= 0:
+
+	if galleons > 0:
 		if galleons > 1:
 			output = output + str(galleons) + " galleons"
 		else:
 			output = output + str(galleons) + " galleon"
-	
+
 	if sickles > 0:
 		if output:
 			output = output + " "
@@ -24,7 +26,7 @@ def convert_knuts(knuts=450):
 			output = output + str(sickles) + " sickles"
 		else:
 			output = output + str(sickles) + " sickle"
-	
+
 	if remaining_knuts > 0:
 		if output:
 			output = output + " "
@@ -32,7 +34,7 @@ def convert_knuts(knuts=450):
 			output = output + str(remaining_knuts) + " knuts"
 		else:
 			output = output + str(remaining_knuts) + " knut"
-	
+
 	return output
 
 
@@ -42,7 +44,7 @@ print(convert_knuts(32)) # Expected output: "1 sickle 3 knuts"
 
 print(convert_knuts()) # Expected output: "1 galleon 14 sickles 1 knuts"
 
-print(convert_knuts(544)) # Expected output: "1 galleon 4 sickles 18 knuts"
+print(convert_knuts(544)) # Expected output: "1 galleon 1 sickle 22 knuts"
 
 print(convert_knuts(993)) # Expected output: "2 galleons 7 knuts" 
 # Note: convert_knuts(993) will not output 2 galleons 0 sickle 7 knuts

@@ -1,5 +1,6 @@
 class Recipe:
-	def __init__(name, cooking_time):
+	def __init__(self, name, cooking_time):
+		# Without self, Python could not bind the Recipe instance during construction.
 		self.name = name
 		self.cooking_time = cooking_time
 	
@@ -10,13 +11,15 @@ class Recipe:
 		self.name = name
 	
 	def get_cooking_time(self):
-		return cooking_time
+		# The getter must read the instance field, not an undefined local name.
+		return self.cooking_time
 	
 	def set_cooking_time(self, cooking_time):
 		self.cooking_time = cooking_time
 	
 	def is_quick_meal(self):
-		return self.cooking_time == 30
+		# A quick meal is 30 minutes or less; checking equality excluded 25-minute meals.
+		return self.cooking_time <= 30
 	
 
 # Test the function with a sample input

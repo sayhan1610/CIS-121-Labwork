@@ -1,15 +1,19 @@
-from random import randominteger
+# randominteger is not in random; randint is the standard inclusive integer generator.
+from random import randint
 
-def guess(guess="odd"):
+
+def guess(guess="even"):
+	guess = guess.strip().lower()
 	value = randint(0, 9)
-	
-	if value // 2 == 0:
+
+	# Modulo identifies parity; floor division marked 0 and 1 as "even".
+	if value % 2 == 0:
 		actual = "even"
 	else:
 		actual = "odd"
-	
-	print ('random value: ' + actual)
-	print ('guess value: ' + guess)
+
+	print('random value: ' + actual)
+	print('guess value: ' + guess)
 	if guess == actual:
 		return "Correct!"
 	else:

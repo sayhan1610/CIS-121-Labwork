@@ -1,9 +1,10 @@
 def highway_directions(highway_num):
+	# Primary parity was reversed, and the auxiliary branch checked even twice.
 	if 1 <= highway_num <= 99:
 		if highway_num % 2 == 0:
-			return f"I-{highway_num} runs north/south"
-		else:
 			return f"I-{highway_num} runs east/west"
+		else:
+			return f"I-{highway_num} runs north/south"
 
 
 	elif 100 <= highway_num <= 999:
@@ -12,7 +13,7 @@ def highway_directions(highway_num):
 		if 1 <= service_highway <= 99:
 			if service_highway % 2 == 0:
 				return f"I-{highway_num} runs east/west"
-			elif service_highway % 2 == 0:
+			else:
 				return f"I-{highway_num} runs north/south"
 		else:
 			return f"I-{highway_num} is an invalid highway number"

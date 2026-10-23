@@ -12,3 +12,14 @@ if __name__ == "__main__":
     print(even(37, 1050))
     print(even(1, 2000))
     print(even(50, 199))
+    
+    
+    
+    
+    
+def output_even(smaller_num, larger_num):
+    result = []
+    for i in range(smaller_num, larger_num + 1):
+        if i % 2 == 0:
+            result.append(i)
+    return result
